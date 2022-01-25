@@ -44,7 +44,7 @@ def argument():
 def mac(network_interface, new_mac):
     print("[+] MAC address of " + network_interface + " has been changed to " + new_mac)
     subprocess.call(["ifconfig", network_interface, "down"])
-    subprocess.call(["ifconfig", network_interface, "hw ether", new_mac])
+    subprocess.call(["ifconfig", network_interface, "hw", "ether", new_mac])
     subprocess.call(["ifconfig", network_interface, "up"])
 
 
